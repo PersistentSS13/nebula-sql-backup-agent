@@ -1,7 +1,8 @@
-FROM google/cloud-sdk:alpine
+FROM google/cloud-sdk:398.0.0-alpine
 
-RUN apt-get update
-RUN apt-get install -y mysql-client
+
+RUN apk --update add mysql-client
 
 COPY . /run
 
+ENTRYPOINT ["/run/run_backup.sh"]
