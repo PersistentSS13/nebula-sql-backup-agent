@@ -1,8 +1,10 @@
 #!/bin/bash
 # Must set:
-# SQL_HOST, SQL_USER, SQL_PASS, SQL_DB, GCP_GS_BUCKET, PREFIX
+# SQL_HOST, SQL_USER, SQL_PASS, SQL_DB, GCP_GS_BUCKET
 
+export GOOGLE_APPLICATION_CREDENTIALS="/run/service-account.json"
 
+PREFIX=bs12
 DATE=$(date '+%Y%m%d%H%M')
 FILE=`echo ${PREFIX}_${DATE}.sql
 mysqldump -h ${SQL_HOST} --user=${SQL_USER} --password=${SQL_PASS} ${SQL_DB} > /tmp/${FILENAME}
