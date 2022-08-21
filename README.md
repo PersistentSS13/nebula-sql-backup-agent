@@ -13,5 +13,5 @@ GCP_GS_BUCKET
 
 Required mounts:
 ```
-/run/service-account.json
+/etc/gcp-sa/service-account.json
 ```

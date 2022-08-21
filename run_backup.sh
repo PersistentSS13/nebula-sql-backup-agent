@@ -1,7 +1,7 @@
 #!/bin/bash
 # Must set:
 # SQL_HOST, SQL_USER, SQL_PASS, SQL_DB, GCP_GS_BUCKET
-gcloud auth activate-service-account --key-file /run/service-account.json
+gcloud auth activate-service-account --key-file /etc/gcp-sa/service-account.json
 
 PREFIX=bs12
 DATE=$(date '+%Y%m%d%H%M')
