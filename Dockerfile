@@ -1,4 +1,4 @@
-FROM google/cloud-sdk:398.0.0-alpine
+FROM google/cloud-sdk:402.0.0-alpine
 
 
 RUN apk --update add mysql-client
